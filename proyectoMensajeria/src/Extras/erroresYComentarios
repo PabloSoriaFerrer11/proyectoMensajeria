@@ -1,0 +1,65 @@
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+	FICHA DE ERRORES Y COMENTARIOS
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+--03/12/2021--
+1.- Puede haber error si 2 usuarios tienen el mismo nombre en el método "buscarUsu".
+2.- Cambiar en la BBDD el error de que no puedo eliminar un grupo porque debe haber minimo un administrador.
+3.- Cambiar que el usuario introduzca su id. Este debe ponerse automaticamente.
+4.- Cambiar que todos los metodos de las clases sean statics y crear objetos dentro de las clases. 
+5.- Falta crear dialogos donde pedir datos para crear grupos y conversaciones.
+6.- Falta añadir los grupos y conversaciones a la app con paneles.
+7.- Recordar que puedo utilizar los objetos del paquete "objetos" (Chat, Mensaje y Usuario).  
+
+
+--07/12/2021--
+Hoy se ha creado el jDialogCrearConver.
+1.- El método buscarIDxNombre podría retornar null si no encuentra el usuario y eso podría llevar a errores futuros.
+2.- Cambiar que el usuario introduzca el id del chat. Este se debe poner automaticamente.
+3.- Comprobar que pasa si en el jDialogCrearConver de usuario nos ponemos a nosotros mismos.
+4.- Se ha creado un objeto Conexion en gestionUsuarios.
+
+
+--09/12/2021--
+He salucionado el error de la BBDD que me impedía borrar un grupo. He creado el jDialogCrearGrupo
+He cambiado la tabla chat por un serial.
+1.- Se podría intentar controlar que la informacion de los jDialogs este vacía y no salte un error.
+2.- Plantearse un metodo que dado un nombre, busque si ese nombre se encuentra en la BBDD. Ahora mismo no existe tal metodo.
+3.- Si buscarIDxNombre no encuentra el usuario devuelve 0.
+
+
+--15/12/2021--
+1.- Si quisiera cambiar los usuarios, las conversaciones y grupos a serial seria facil insertar. 
+Puesto que siempre buscaríamos el máximo con max() y le sumariamos uno!!!!!!!!!!
+2.- Plantear como va a ser la emision y recepcion de mensajes
+3.- Se ha creado un arrayList con todos los chats de la consulta. Habrá que comprobar si el usuario esta como usu1 o usu2.
+Aunque ralemente no se si tendrá mucho peso el saber si esta como usuario 1 o como o usuario 2. 
+4.- La interfaz podría tratar de 3 botones que depende de como se pulsen recorreran un arrayList de chats. 
+El boton de en medio será para enviar un mensaje al chat.
+5.- Si un usuario crea un chat con otro y a la vez ese usario hace lo mismo. En el array se debe controlar qeu no se repita
+
+
+--17/12/2021--
+1.- Queda por hacer la opcion para añadir un usuario a un grupo(solo el admin puede), eliminar un grupo(solo el admin puede), permitir la 
+limpieza de un chat(solo el admin puede)  y amistades.
+
+--26/12/2021--
+1.- Al darle al boton de terminar chat sobre un grupo del que el usuario es administrador pasa algo raro pero no se borra el grupo. Lo caul esta bien
+porque no se debería borrasr.
+2.- En "jButtonElegir" podría mostrar algo si no se encuentra el chat porque esta en otra pesataña.
+3.- ERROR Por alguna razon que aun no se conoce, el usuario PabloAdmin puede ver la conversacion entre PabloNormal y 
+Daniel pero SOLAMENTE cuando esta en la pestaña de amigos.
+4.- ERROR Al ser PabloAdmin quien crea la conversacion el usuario 2 es PabloNormal. Si PabloNormal intenta marcar como favoritos 
+un chat los 2 usuarios aparecen que son el mismo
+5.- ERROR Usuario.getContraseña a veces falla y no se sabe muy bien el porque.
+
+
+--28/12/2021--
+Si no hay nada en la tabla, max() devuelve 0.
+
+--03/01/2022--
+Estaría bien sacar una tabla donde aparecieran los usuarios, modo agenda,  para poder enviarles un mensaje. 
+
+
